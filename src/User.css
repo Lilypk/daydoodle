@@ -1,0 +1,17 @@
+
+.newdrawing {
+    position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 30px;
+  color: green;
+  cursor: pointer;
+}
+.feed {
+    position: absolute;
+    top:35px;
+    right: 16px;
+    font-size: 30px;
+    color: green;
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+body {
+  background-image: linear-gradient(to right, aquamarine , darkgreen);
+}

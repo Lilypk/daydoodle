@@ -1,0 +1,25 @@
+.homepageall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    margin-top: 200px;
+}
+.daydoodle {
+    font-size: 60px;
+}
+.homepageloginsignup {
+    display: flex;
+    flex-direction: row;
+   font-size: 30px;
+   cursor: pointer;
+}
+.login {
+    margin-right: 30px;
+}
+body {
+    background-color: aquamarine;
+    font-family: 'IM Fell English SC', serif;
+}
+

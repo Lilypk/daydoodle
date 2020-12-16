@@ -1,0 +1,38 @@
+.feednewdrawing {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+}
+.feedprofile {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 16px;
+}
+.logout {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-size: 20px;
+}
+body {
+    background-image: linear-gradient(to right, aquamarine , darkgreen);
+}
+.finishedcanvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

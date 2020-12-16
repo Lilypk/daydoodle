@@ -1,0 +1,45 @@
+.canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.post {
+     color: #174328;
+     font-size: 30px;
+     cursor: pointer;
+     border: none;
+     text-decoration: none;
+     background-color: transparent;
+}
+.clear {
+    color: #174328;
+     font-size: 25px;
+     cursor: pointer;
+     border: none;
+     text-decoration: none;
+     background-color: transparent;
+}
+.save {
+    color: #174328;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+.save:hover {
+    background-color: white;
+}
+.clear:hover {
+    background-color: white;
+}
+.post:hover {
+    background-color: white;
+}
+.imageDiv {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+}
