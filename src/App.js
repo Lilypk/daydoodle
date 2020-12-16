@@ -6,8 +6,8 @@ import Homepage from './Homepage';
 import Feed from './Feed';
 import Canvas from './Canvas';
 import User from './User'
-//import Register from './Register'
-//import Login from './Login'
+import Register from './Register'
+import Login from './Login'
 
 
 
@@ -17,8 +17,8 @@ class App extends Component {
     super(props)
     this.state = {
       homeJson: null,
-      registerJson: null,
-      loginJson: null,
+   registerJson: null,
+   loginJson: null,
       feedJson: null,
       userJson: null,
       canvasJson: null
@@ -75,12 +75,12 @@ class App extends Component {
      <Switch>
        
       
-    //  <Route path='/register'>
-   //   <Register data={this.state.registerJson} />
-   //   </Route>
-  //    <Route path='/login'>
-//      <Login data={this.state.loginJson}/>
-   //   </Route>
+      <Route path='/register'>
+      <Register data={this.state.registerJson} />
+      </Route>
+     <Route path='/login'>
+     <Login data={this.state.loginJson}/>
+     </Route>
       <Route path='/feed'>
       <Feed data={this.state.feedJson}/>
       </Route>
