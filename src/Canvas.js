@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./Canvas.css";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import CanvasDraw from "react-canvas-draw";
-//import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class Canvas extends Component {
   constructor(props) {
