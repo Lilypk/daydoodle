@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Feed.css";
 import {Link} from 'react-router-dom'
-import CanvasDraw from "react-canvas-draw";
+//import CanvasDraw from "react-canvas-draw";
 
 class Feed extends Component {
   constructor(props) {

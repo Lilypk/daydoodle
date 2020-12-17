@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 import Homepage from './Homepage';
 import Feed from './Feed';
 import Canvas from './Canvas';
@@ -17,8 +17,8 @@ class App extends Component {
     super(props)
     this.state = {
       homeJson: null,
-      registerJson: null,
-      loginJson: null,
+   registerJson: null,
+   loginJson: null,
       feedJson: null,
       userJson: null,
       canvasJson: null
@@ -78,9 +78,9 @@ class App extends Component {
       <Route path='/register'>
       <Register data={this.state.registerJson} />
       </Route>
-      <Route path='/login'>
-      <Login data={this.state.loginJson}/>
-      </Route>
+     <Route path='/login'>
+     <Login data={this.state.loginJson}/>
+     </Route>
       <Route path='/feed'>
       <Feed data={this.state.feedJson}/>
       </Route>
