@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import CanvasDraw from "react-canvas-draw";
 import {Link} from 'react-router-dom'
 
+// canvasdraw default props 
 class Canvas extends Component {
   constructor(props) {
     super(props);
@@ -24,11 +25,13 @@ class Canvas extends Component {
         color: "#" + Math.floor(Math.random() * 16777215).toString(16),
       });
     }, 2000);
+    // fetch from /canvas 
     fetch("https://drawingapp-capstone.herokuapp.com/canvas")
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        
+    // a loop to go through the returned string, using JSON.parse 
+    // to turn the string into an object 
         for (let i=0; i < data.length; i++) {
           console.log(data[i])
             data[i]=JSON.parse(JSON.stringify(data[i]))
@@ -38,7 +41,8 @@ class Canvas extends Component {
       
       
   }
-
+    // getSaveData returns the drawing's save-data as a stringified object
+    
   canvasString = (e) => {
     e.preventDefault();
     console.log(this.state.caption);
@@ -58,7 +62,8 @@ class Canvas extends Component {
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
-
+    
+    // under construction 
   handleDelete = (_id, e) => {
     console.log(_id);
     fetch("https://drawingapp-capstone.herokuapp.com/canvas" + _id, {
@@ -78,6 +83,7 @@ class Canvas extends Component {
         <div className="logo"><Link to = '/'>DAYDOODLE</Link></div>
 
         <div className="canvas">
+        {/* changable brush radius */}
           <div>
             <label>Brush-Radius:</label>
             <input
@@ -88,6 +94,7 @@ class Canvas extends Component {
               }
             />
           </div>
+          {/* changable lazy radius */}
           <div>
             <label>Lazy-Radius:</label>
             <input
@@ -98,6 +105,7 @@ class Canvas extends Component {
               }
             />
           </div>
+          {/* clear drawing */}
           <button
             className="clear"
             onClick={() => {
@@ -106,13 +114,15 @@ class Canvas extends Component {
           >
             Clear
           </button>
-          
+          {/* drawing canvas component */}
           <CanvasDraw
             ref={(canvasDraw) => (this.saveableCanvas = canvasDraw)}
             brushColor={this.state.color}
             brushRadius={this.state.brushRadius}
             lazyRadius={this.state.lazyRadius}
           />
+          {/* setItem sets the value of the specified local storage item
+          save drawing using getSaveData */}
        <button
        className='save'
             onClick={() => {
@@ -124,6 +134,8 @@ class Canvas extends Component {
           >
             Save
           </button>
+          {/* in the form- caption, post button 
+          which onClick takes my canvasString method  */}
           <form>
             <label>
               caption:
@@ -143,7 +155,8 @@ class Canvas extends Component {
               post
             </button>
           </form>
-         
+         {/* map through captions
+         second canvasDraw component- loads saved drawing */}
           <div>
             {this.state.drawings.map((drawing, i) => (
               <div key={i}>
